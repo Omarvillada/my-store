@@ -47,3 +47,12 @@ const omar = new Person(24,"Villada");
 omar.lastName
 
 ~~~
+
+## String interpolation
+codigo javascript que se ejecuta entre {{}}
+~~~
+<h1>Hola Mundo</h1>
+<h1>{{'Hola Mundo'.repeat(5)}}</h1>
+<p>3 + 3 = {{3 + 3}}</p>
+~~~
+String interpolation: La forma en la que desde la lógica de nuestro typeScript podemos pasar datos a renderizar a nuestro template(html). En otras palabras, con las {{ }} podemos usar typeScript en html.
