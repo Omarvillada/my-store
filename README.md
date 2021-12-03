@@ -30,7 +30,7 @@ Angular Basics - Platzi
 
 ## Conceptos de TypeScript
 
-\````javascript
+~~~
 const username: string | number = 'omar';
 const sum = (a: number, b:number) =>{
   return  a + b;
@@ -43,5 +43,7 @@ class Person {
   }
 }
 
-const omar = new Pe
-\````
+const omar = new Person(24,"Villada");
+omar.lastName
+
+~~~
