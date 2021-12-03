@@ -6,9 +6,9 @@ const sum = (a: number, b:number) =>{
 sum(1,2)
 
 class Person {
-  constructor(private age: number, public lasName: string){
+  constructor(private age: number, public lastName: string){
   }
 }
 
 const omar = new Person(24,"Villada");
-omar.lasName
+omar.lastName

@@ -29,3 +29,19 @@ Angular Basics - Platzi
 * .nvmrc: se usa cuando se esta trabajando con varias versiones de node
 
 ## Conceptos de TypeScript
+
+\''''
+const username: string | number = 'omar';
+const sum = (a: number, b:number) =>{
+  return  a + b;
+}
+
+sum(1,2)
+
+class Person {
+  constructor(private age: number, public lastName: string){
+  }
+}
+
+const omar = new Pe
+\''''
