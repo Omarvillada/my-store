@@ -56,3 +56,7 @@ codigo javascript que se ejecuta entre {{}}
 <p>3 + 3 = {{3 + 3}}</p>
 ~~~
 String interpolation: La forma en la que desde la lógica de nuestro typeScript podemos pasar datos a renderizar a nuestro template(html). En otras palabras, con las {{ }} podemos usar typeScript en html.
+
+## Property Binding
+Forma de modificar atributos en el controlador hasta nuestros componentes en html, es decir modificar el valor de los atributos por ejemplo de una etiqueta html. siempre lo debemos hacer al configurar propiedades html
+[property] = "variableComponente"
