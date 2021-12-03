@@ -15,7 +15,7 @@ Angular Basics - Platzi
 
 ## Comandos de Angular
 * ng serve -o para lanzar el servidor de desarrollo y abrir el navegador y ng serve -o --port=3500 para especificar el puerto
-* ng serve dentro del proyecto para ver las dependecinas que tenemos instaladas
+* ng version dentro del proyecto para ver las dependecinas que tenemos instaladas
 
 ## Estructura de un proyecto
 
@@ -27,3 +27,5 @@ Angular Basics - Platzi
 * Karma.config: Archivo para correr pruebas unitarias
 * package.json: scripts y versiones que estamos manejando
 * .nvmrc: se usa cuando se esta trabajando con varias versiones de node
+
+## Conceptos de TypeScript
