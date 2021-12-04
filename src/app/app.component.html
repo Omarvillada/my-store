@@ -1,5 +1,10 @@
-<h1>Propiedades</h1>
+<h1>Eventos</h1>
 
+<button [disabled] = "btnDisable">Enviar</button>
+<button (click)="toggleButton()">Toggle Button</button>
+<p>Edad: {{age}}</p>
+<button [disabled] = "btnDisable" (click)="ageincreaseAge()">Age++</button>
+<h1>Propiedades</h1>
 <button [disabled] = "btnDisable">Enviar</button>
 <input type="text" [value] ="name">
 <progress max="100" [value]="age"></progress>

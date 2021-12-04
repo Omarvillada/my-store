@@ -59,4 +59,10 @@ String interpolation: La forma en la que desde la lógica de nuestro typeScript 
 
 ## Property Binding
 Forma de modificar atributos en el controlador hasta nuestros componentes en html, es decir modificar el valor de los atributos por ejemplo de una etiqueta html. siempre lo debemos hacer al configurar propiedades html
-[property] = "variableComponente"
+<element [property] = "variableComponente">
+
+## Introduccion a Event Binding de Angular
+Event Binding
+El Event Binding le permite escuchar y responder a las acciones del usuario, como pulsaciones de teclas, movimientos del mouse, clics y toques (Atributos HTML y propiedades DOM).
+Nos sirve para capturar eventos de elementos HTML
+<elemnt (click) = "onSave()">
