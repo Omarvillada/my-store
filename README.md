@@ -174,3 +174,13 @@ En el contexto de un formulario principal, a menudo no es necesario incluir enla
 * https://developer.mozilla.org/es/docs/Learn/Forms/Form_validation
 * https://angular.io/api/forms/FormControl
 * https://angular.io/api/forms/NgModel
+* https://gustavodohara.com/blogangular/banana-in-box-banana-la-caja/
+
+## Directiva ngIf
+Nos permite condicionar la visibilidad de los elemntos html
+~~~
+<p *ngIf="name === 'soy julian' && age == 18; else elseBlock">Soy Julian</p>
+<ng-template #elseBlock>
+  <p>Else Block</p>
+</ng-template>
+~~~
