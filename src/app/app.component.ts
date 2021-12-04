@@ -14,6 +14,7 @@ export class AppComponent {
 
   names: string[] = ['Omar', 'Manuela', 'Oscar', 'Santiago'];
   newName: string = ''
+  widthImg = '10'
 
 
   products: Product[] = [

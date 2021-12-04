@@ -1,3 +1,18 @@
+<h1>Class y Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)] = "name">
+<p class="message-error"[class.invalid]="nameInput2.invalid">El campo es requerido</p>
+<label for="">Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)] = "name">
+<p [style.font-style]="nameInput3.invalid ? 'italic':'normal'">Texto Texto Texto</p>
+<div class="styles">
+    <div>
+      <input type="text" [(ngModel)] = "widthImg">
+    </div>
+    <div>
+      <img [style.width.px] = "widthImg"[src]="image" alt="">
+    </div>
+</div>
+<hr/>
 <h1>*ngSwitch</h1>
 <input type="text" required [(ngModel)]="name" />
 <div [ngSwitch]="name">
