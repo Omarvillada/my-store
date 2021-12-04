@@ -184,3 +184,17 @@ Nos permite condicionar la visibilidad de los elemntos html
   <p>Else Block</p>
 </ng-template>
 ~~~
+## Directiva ngFor
+Nos permite iterar sobre elementos HTML de forma dinamica, nos sirve por ejemplo para iterar arrays en listas HTML
+~~~
+<h1>ngFor</h1>
+<input type="text" [(ngModel)] = "newName"/>
+<button (click)="addName()">Add Name</button>
+<ul>
+  <li *ngIf="names.length === 0">No hay nombres</li>
+  <li *ngFor="let name of names; index as i">
+    {{i}} {{name}}
+    <button (click)="deleteName(i)">Delete</button>
+  </li>
+</ul>
+~~~
