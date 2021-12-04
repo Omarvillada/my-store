@@ -198,3 +198,57 @@ Nos permite iterar sobre elementos HTML de forma dinamica, nos sirve por ejemplo
   </li>
 </ul>
 ~~~
+## ngFor para arrays
+Ejemplo de renderizacion de un array de objetos
+~~~
+  products: Product[] = [
+    {
+      name: 'EL mejor juguete',
+      price: 565,
+      image: './assets/images/toy.jpg',
+      category: 'all',
+    },
+    {
+      name: 'Bicicleta casi nueva',
+      price: 356,
+      image: './assets/images/bike.jpg'
+    },
+    {
+      name: 'Colleción de albumnes',
+      price: 34,
+      image: './assets/images/album.jpg'
+    },
+    {
+      name: 'Mis libros',
+      price: 23,
+      image: './assets/images/books.jpg'
+    },
+    {
+      name: 'Casa para perro',
+      price: 34,
+      image: './assets/images/house.jpg'
+    },
+    {
+      name: 'Gafas',
+      price: 3434,
+      image: './assets/images/glasses.jpg'
+    }
+  ]
+  <h1>*ngFor Objs</h1>
+<div>
+  <div *ngFor="let product of products">
+    <img width="250" [src]="product.image" alt="image">
+    <h2>{{product.price}}</h2>
+    <p>{{product.name}}</p>
+  </div>
+~~~
+Es importante tipar los datos, por ejemplo podemos determinar como se construye un objeto a partir de definir una iterface en typscript, ejemplo:
+~~~
+export interface Product {
+  name: string;
+  price: number;
+  image: string;
+  category?: string;
+}
+
+~~~
