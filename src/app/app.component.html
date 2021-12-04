@@ -1,59 +1,93 @@
+<h1>*ngSwitch</h1>
+<input type="text" required [(ngModel)]="name" />
+<div [ngSwitch]="name">
+  <p *ngSwitchCase="'omar'">Mi nombre es omar</p>
+  <p *ngSwitchCase="'pedro'">Mi nombre es pedro</p>
+  <p *ngSwitchCase="'alirio'">Mi nombre es alirio</p>
+  <p *ngSwitchDefault> No hay coincidencias</p>
+</div>
+
+<!-- <p *ngIf="name === 'omar'">
+  Mi nombre es omar
+</p>
+<p *ngIf="name === 'pedro'">
+  Mi nombre es pedro
+</p>
+<p *ngIf="name === 'alirio'">
+  Mi nombre es alirio
+</p> -->
+<hr />
 <h1>*ngFor Objs</h1>
 <div>
   <div *ngFor="let product of products">
-    <img width="250" [src]="product.image" alt="image">
-    <h2>{{product.price}}</h2>
-    <p>{{product.name}}</p>
+    <img width="250" [src]="product.image" alt="image" />
+    <h2>{{ product.price }}</h2>
+    <p>{{ product.name }}</p>
   </div>
-
 </div>
-<hr/>
+<hr />
 <h1>ngFor</h1>
-<input type="text" [(ngModel)] = "newName"/>
+<input type="text" [(ngModel)]="newName" />
 <button (click)="addName()">Add Name</button>
 <ul>
   <li *ngIf="names.length === 0">No hay nombres</li>
   <li *ngFor="let name of names; index as i">
-    {{i}} {{name}}
+    {{ i }} {{ name }}
     <button (click)="deleteName(i)">Delete</button>
   </li>
 </ul>
-<hr/>
+<hr />
 <h1>ngIf</h1>
-<input type="text"  [(ngModel)] = "name">
+<input type="text" [(ngModel)]="name" />
 <p *ngIf="name === 'soy omar'">Soy Omar</p>
 <p *ngIf="name === 'soy julian' && age == 18; else elseBlock">Soy Julian</p>
 <ng-template #elseBlock>
   <p>Else Block</p>
 </ng-template>
-<hr/>
+<hr />
 <h1>NgModel</h1>
-<p>Nombre: {{name}}</p>
-<input type="text" required #nameInput="ngModel" [(ngModel)] = "name">
-<p>Age: {{age}}</p>
-<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)] = "age">
-<p>Valid: {{ageInput.valid}}</p>
+<p>Nombre: {{ name }}</p>
+<input type="text" required #nameInput="ngModel" [(ngModel)]="name" />
+<p>Age: {{ age }}</p>
+<input
+  type="number"
+  max="18"
+  min="10"
+  required
+  #ageInput="ngModel"
+  [(ngModel)]="age"
+/>
+<p>Valid: {{ ageInput.valid }}</p>
 
-<hr/>
+<hr />
 <h1>Eventos</h1>
-<button [disabled] = "btnDisable">Enviar</button>
+<button [disabled]="btnDisable">Enviar</button>
 <button (click)="toggleButton()">Toggle Button</button>
-<p>Edad: {{age}}</p>
-<button [disabled] = "btnDisable" (click)="ageincreaseAge()">Age++</button>
+<p>Edad: {{ age }}</p>
+<button [disabled]="btnDisable" (click)="ageincreaseAge()">Age++</button>
 <div class="box" (scroll)="onScroll($event)">
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  <p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    Lorem Ipsum has been the industry's standard dummy text ever since the
+    1500s, when an unknown printer took a galley of type and scrambled it to
+    make a type specimen book. It has survived not only five centuries, but also
+    the leap into electronic typesetting, remaining essentially unchanged. It
+    was popularised in the 1960s with the release of Letraset sheets containing
+    Lorem Ipsum passages, and more recently with desktop publishing software
+    like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
 </div>
-<p>{{name}}</p>
-<input type="text" [value] ="name" (keyup)="changeName($event)">
-<hr/>
+<p>{{ name }}</p>
+<input type="text" [value]="name" (keyup)="changeName($event)" />
+<hr />
 <h1>Propiedades</h1>
-<button [disabled] = "btnDisable">Enviar</button>
-<input type="text" [value] ="name">
+<button [disabled]="btnDisable">Enviar</button>
+<input type="text" [value]="name" />
 <progress max="100" [value]="age"></progress>
-<img [src]="image" width="100">
-<hr/>
+<img [src]="image" width="100" />
+<hr />
 <h1>Hola Mundo</h1>
-<h1>{{'Hola Mundo'.repeat(5)}}</h1>
-<p>3 + 3 = {{3 + 3}}</p>
-<h3>Hola, soy: {{name}} y tengo {{age}} años</h3>
-<img src="{{image}}" alt="">
+<h1>{{ "Hola Mundo".repeat(5) }}</h1>
+<p>3 + 3 = {{ 3 + 3 }}</p>
+<h3>Hola, soy: {{ name }} y tengo {{ age }} años</h3>
+<img src="{{ image }}" alt="" />
