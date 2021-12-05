@@ -257,3 +257,7 @@ El funcionamiento de esta directiva es exactamente igual que el de un switch de 
 
 ## Class and style
 Se puede modificar el estilo de los componentes html de forma dinamica, se aplicar una clase o directamente aplicar propiedades css [class.claseStyle] = "valor booleano" o [style.font-style] = "nameInput3.invalid ? 'italic':'normal'" es decir se puede hacer data binding directamente a los valores de css
+
+## NgClass y NgStyle
+La NgStyle directiva te permite establecer propiedades de estilo de elementos DOM determinados.
+La NgClass directiva te permite configurar la clase CSS de forma dinámica para un elemento DOM.
